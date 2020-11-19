@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- meta for device width for mobile responsivity (?) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Pisca Pisca</title>
+		
+		<!-- Google fontes-->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500;700&family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
+		
+		<!-- Css stylesheets -->
+	  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		  
+		<!-- Font Awasome - icons -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	  
+		<!-- Bootstrap scripts -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	  
+		<!-- scripts mqtt -->
+		<script type='text/javascript' src='mosquitto.js'></script>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.min.js'></script>
+        <script type="text/javascript">
+        </script>
+	</head>
+
+	<body>
+		<!--
+		<div id="publish">
+			<br>
+			<font color="#3D3D3F"><b>1º passo:</b></font> definir os tópicos MQTT de subscribe e publish:
+			<p>Tópico de envio de informações: <input class="txt" id="pub-topic-text" type="text" value="MQTTFilipeFlopEnvia"></p>
+			<p>Tópico de recepcao de informações: <input class="txt" id="pub-subscribe-text" type="text" value="MQTTFilipeFlopRecebe"></p>
+			<br>
+		</div>	 
+			
+		<div id="broker">
+			<font color="#3D3D3F"><b>2º Passo:</b></font> conectar-se ao servidor / broker:<br><br>
+			<input class="but" id="connect-button" type="button" value="Conectar">
+			<input class="but" id="disconnect-button" type="button" value="Desconectar">
+		</div>
+		<br><br>
+		<font color="#3D3D3F"><b>3º passo:</b></font> escolha a ação desejada:<br><br>
+		-->
+		
+		<div class="my-title" align="center">
+			<h1>Pisca_Pisca</h1><span class="IOT">:IOT</span>
+		</div>
+
+		<div class="box-buttons">
+			<div class="row my-row">
+				<div class="col-md-6" align="center">
+					<input class="btn btn-outline-primary btn-lg my-btn" id="liga-output" type="button" value="Ligar">
+				</div>
+				<div class="col-md-6" align="center">
+					<input class="btn btn-outline-primary btn-lg my-btn" id="desliga-output" type="button" value="Desligar">
+				</div>
+			</div>
+		</div>
+		<div class="box-lamp" align="center">
+			<i class='far fa-lightbulb lamp'></i>
+		</div>
+
+		<div class="row">
+			<div class="col-12 box-lamp" id="box-lamp" align="center">
+			</div>
+		</div>
+			
+
+		<div class="my-info" align="center">
+			<div id="debug" align="center"></div>	
+        </div>
+        
+        <script src="tmo.js" type="text/javascript"></script>
+	</body>
+</html>
